@@ -1,0 +1,19 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  height: 0.4375rem;
+  width: 0.4375rem;
+}
+
+ul::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background-color: #353535;
+}
