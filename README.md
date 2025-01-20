@@ -1,59 +1,59 @@
-# Projeto FullStack - Agenda de Contatos
+# FullStack Project - Contact Agenda
 
-O projeto Agenda de Contatos é um projeto FullStack que oferece funcionalidades de gerenciamento de usuários, contatos, autenticação e interação com um banco de dados PostgreSQL. O Back-End foi desenvolvido em TypeScript/JavaScript usando o framework Express, enquanto o Front-End é construído com React e TypeScript utilizando o Vite.
+The Contact Agenda project is a FullStack project that provides user management, contacts, authentication, and interaction with a PostgreSQL database. The Back-End was developed in TypeScript/JavaScript using the Express framework, while the Front-End is built with React and TypeScript using Vite.
 
 ## Figma
 
-Você pode visualizar o design do projeto no Figma [CLIQUE AQUI](https://www.figma.com/file/zWNHZTOPqTqZny6OaF8SG0/Agenda-de-Contatos?type=design&node-id=0%3A1&mode=design&t=0rl7sjE3LVl3As6G-1).
+You can view the project design on Figma [CLICK HERE](https://www.figma.com/file/zWNHZTOPqTqZny6OaF8SG0/Agenda-de-Contatos?type=design&node-id=0%3A1&mode=design&t=0rl7sjE3LVl3As6G-1).
 
-## Índice
+## Index
 
-- [Instruções de Instalação/Teste](#instruções-de-instalaçãoteste)
+- [Installation/Test Instructions](#installationtest-instructions)
   - [Backend](#backend)
   - [Frontend](#frontend)
-  - [Teste no Insomnia](#teste-no-insomnia)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+  - [Test in Insomnia](#test-in-insomnia)
+- [Technologies Used](#technologies-used)
   - [Backend](#backend-1)
   - [Frontend](#frontend-1)
-- [Funcionalidades no Front-End](#funcionalidades-no-front-end)
-- [Páginas no Front-End](#páginas-no-front-end)
-- [Rotas](#rotas)
-  - [Autenticação](#autenticação)
+- [Frontend Features](#frontend-features)
+- [Frontend Pages](#frontend-pages)
+- [Routes](#routes)
+  - [Authentication](#authentication)
     - [Login](#login)
-  - [Usuários](#usuários)
-    - [Criar Usuário](#criar-usuário)
-    - [Listar Usuários](#listar-usuários)
-    - [Obter Usuário](#obter-usuário)
-    - [Atualizar Usuário](#atualizar-usuário)
-    - [Remover Usuário](#remover-usuário)
-  - [Contatos](#contatos)
-    - [Criar Contato](#criar-contato)
-    - [Listar Contatos](#listar-contatos)
-    - [Atualizar Contato](#atualizar-contato)
-    - [Remover Contato](#remover-contato)
-- [Autor](#autor)
-- [Contribuição](#contribuição)
+  - [Users](#users)
+    - [Create User](#create-user)
+    - [List Users](#list-users)
+    - [Get User](#get-user)
+    - [Update User](#update-user)
+    - [Remove User](#remove-user)
+  - [Contacts](#contacts)
+    - [Create Contact](#create-contact)
+    - [List Contacts](#list-contacts)
+    - [Update Contact](#update-contact)
+    - [Remove Contact](#remove-contact)
+- [Author](#author)
+- [Contributing](#contributing)
 
-## Instruções de Instalação/Teste
+## Installation/Test Instructions
 
 ### Backend
 
-1. Clone o repositório.
-2. Abra o terminal do VSCode com <strong>" CTRL + J "</strong> e navegue até a pasta `Back-End_Project` com os comandos `cd Desafio-Fullstack_JhonnatanDouglas/` e depois `cd Back-End_Project/`.
-3. Execute o comando `npm install` para instalar as dependências.
-4. Configure o arquivo `.env` de acordo com o arquivo de exemplo `.env.example`.
-5. Execute as migrações do banco de dados digitando no terminal `npm run typeorm migration:run -- -d src/data-source`.
-6. Inicie o servidor com `npm run dev`. Ele será executado em `http://localhost:${PORT}/`.
+1. Clone the repository.
+2. Open the VSCode terminal with <strong>" CTRL + J "</strong> and navigate to the `Back-End_Project` folder with the commands `cd Desafio-Fullstack_JhonnatanDouglas/` and then `cd Back-End_Project/`.
+3. Run the command `npm install` to install the dependencies.
+4. Configure the `.env` file according to the example `.env.example`.
+5. Run the database migrations by typing `npm run typeorm migration:run -- -d src/data-source` in the terminal.
+6. Start the server with `npm run dev`. It will run at `http://localhost:${PORT}/`.
 
 ### Frontend
 
-1. Agora que o servidor está rodando no terminal, abra um novo terminal usando o atalho do VSCode <strong>" CTRL + SHIFT + ` "</strong> ou indo até <strong>Terminal > Novo Terminal</strong>.
-2. Com este novo terminal aberto, entre na pasta do `Front-End_Project` com os comandos `cd Desafio-Fullstack_JhonnatanDouglas/` e depois `cd Front-End_Project/`.
-3. Execute o comando `npm install` para instalar as dependências.
-4. Após isso, execute o comando `npm run dev`.
-5. Acesse o endereço fornecido `(por exemplo, "http://localhost:5173/")` no navegador.
+1. Now that the server is running in the terminal, open a new terminal using the VSCode shortcut <strong>" CTRL + SHIFT + ` "</strong> or go to <strong>Terminal > New Terminal</strong>.
+2. With this new terminal open, go to the `Front-End_Project` folder with the commands `cd Desafio-Fullstack_JhonnatanDouglas/` and then `cd Front-End_Project/`.
+3. Run the command `npm install` to install the dependencies.
+4. After that, run the command `npm run dev`.
+5. Access the provided address (e.g., "http://localhost:5173/") in your browser.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 ### Backend
 
@@ -82,66 +82,66 @@ Você pode visualizar o design do projeto no Figma [CLIQUE AQUI](https://www.fig
 - [react-toastify](https://www.npmjs.com/package/react-toastify)
 - [zod](https://www.npmjs.com/package/zod)
 
-## Funcionalidades no Front-End
+## Frontend Features
 
-- **Autenticação:**
+- **Authentication:**
 
-  - Crie uma conta ou faça login para acessar o sistema.
-  - Altere informações do perfil, como nome, telefone e senha.
-  - Exclua sua conta se necessário.
+  - Create an account or log in to access the system.
+  - Change profile information such as name, phone, and password.
+  - Delete your account if necessary.
 
-- **Gerenciamento de Contatos:**
+- **Contact Management:**
 
-  - Adicione novos contatos com nome e telefone.
-  - Visualize uma lista de contatos com detalhes como nome, telefone e data de criação.
+  - Add new contacts with name and phone number.
+  - View a list of contacts with details such as name, phone number, and creation date.
 
 - **PDF:**
-  - Visualize detalhes na lista de contatos em PDF.
-  - Faça o download do PDF associado à lista de contatos.
+  - View details in the contact list in PDF format.
+  - Download the PDF associated with the contact list.
 
-## Páginas no Front-End
+## Frontend Pages
 
-1. **Página de Login:**
+1. **Login Page:**
 
-   - **Rota:** http://localhost:3000`/`
-   - **Descrição:** Rota principal que direciona os usuários para a página de login.
+   - **Route:** http://localhost:3000`/`
+   - **Description:** Main route that directs users to the login page.
 
-2. **Página de Registro:**
+2. **Registration Page:**
 
-   - **Rota:** http://localhost:3000`/register`
-   - **Descrição:** Rota destinada ao registro de novos usuários.
+   - **Route:** http://localhost:3000`/register`
+   - **Description:** Route for registering new users.
 
-3. **Página do Usuário (Dashboard):**
+3. **User Page (Dashboard):**
 
-   - **Rota:** http://localhost:3000`/dashboard`
-   - **Descrição:** Rota protegida, acessível apenas para usuários logados. Apresenta a lista de contatos do usuário.
+   - **Route:** http://localhost:3000`/dashboard`
+   - **Description:** Protected route, accessible only to logged-in users. Displays the user's contact list.
 
-4. **Página de Visualização e Download de PDF:**
-   - **Rota:** http://localhost:3000`/pdf/download`
+4. **PDF View and Download Page:**
+   - **Route:** http://localhost:3000`/pdf/download`
 
-- **Descrição:** Rota protegida, requer login. Permite a visualização e download de PDFs associados à lista de contatos do usuário.
+- **Description:** Protected route, requires login. Allows viewing and downloading PDFs associated with the user's contact list.
 
-## Rotas
+## Routes
 
-### Autenticação
+### Authentication
 
 #### Login
 
-- **Rota:** `POST /login`
-  - **Corpo da Requisição:**
+- **Route:** `POST /login`
+  - **Request Body:**
     ```json
     {
       "email": "email@example.com",
-      "password": "senha123"
+      "password": "password123"
     }
     ```
-  - **Corpo de Resposta:**
+  - **Response Body:**
     ```json
     {
       "token": "token",
       "user": {
         "id": "uuid",
-        "name": "usuario",
+        "name": "user",
         "email": "email@example.com",
         "telephone": "11988887777",
         "register_date": "2023-11-20T21:00:44.182Z"
@@ -149,181 +149,180 @@ Você pode visualizar o design do projeto no Figma [CLIQUE AQUI](https://www.fig
     }
     ```
 
-### Usuários
+### Users
 
-#### Criar Usuário
+#### Create User
 
-Auth: `Desnecessário Token Bearer`
+Auth: `Bearer Token Not Required`
 
-- **Rota:** `POST /users`
-  - **Corpo da Requisição:**
+- **Route:** `POST /users`
+  - **Request Body:**
     ```json
     {
-      "name": "Nome do Usuário",
+      "name": "User Name",
       "email": "email@example.com",
-      "password": "senha123",
+      "password": "password123",
       "telephone": "123456789"
     }
     ```
-  - **Corpo de Resposta:**
+  - **Response Body:**
     ```json
     {
       "id": "uuid",
-      "name": "Nome do Usuário",
+      "name": "User Name",
       "email": "email@example.com",
       "telephone": "123456789",
       "register_date": "2023-11-20T00:00:00.000Z"
     }
     ```
 
-#### Listar Usuários
+#### List Users
 
-Auth: `Necessário Token Bearer`
+Auth: `Bearer Token Required`
 
-- **Rota:** `GET /users`
-  - **Corpo de Resposta:**
+- **Route:** `GET /users`
+  - **Response Body:**
     ```json
     [
       {
         "id": "uuid",
-        "name": "Nome do Usuário",
+        "name": "User Name",
         "email": "email@example.com",
         "telephone": "123456789",
         "register_date": "2023-11-20T00:00:00.000Z"
       }
-      // ... outros usuários
+      // ... other users
     ]
     ```
 
-#### Obter um Usuário
+#### Get a User
 
-Auth: `Necessário Token Bearer`
+Auth: `Bearer Token Required`
 
-- **Rota:** `GET /users/configs`
-  - **Corpo de Resposta:**
+- **Route:** `GET /users/configs`
+  - **Response Body:**
     ```json
     {
       "id": "uuid",
-      "name": "Nome do Usuário",
+      "name": "User Name",
       "email": "email@example.com",
       "telephone": "123456789",
       "register_date": "2023-11-20T00:00:00.000Z"
     }
     ```
 
-#### Atualizar um Usuário
+#### Update a User
 
-Auth: `Necessário Token Bearer`
+Auth: `Bearer Token Required`
 
-- **Rota:** `PATCH /users/configs`
-  - **Corpo da Requisição:**
+- **Route:** `PATCH /users/configs`
+  - **Request Body:**
     ```json
     {
-      "name": "Novo Nome do Usuário",
-      "email": "novoemail@example.com",
-      "password": "novasenha123",
+      "name": "New User Name",
+      "email": "newemail@example.com",
+      "password": "newpassword123",
       "telephone": "987654321"
     }
     ```
-  - **Corpo de Resposta:**
+  - **Response Body:**
     ```json
     {
       "id": "uuid",
-      "name": "Novo Nome do Usuário",
-      "email": "novoemail@example.com",
+      "name": "New User Name",
+      "email": "newemail@example.com",
       "telephone": "987654321",
       "register_date": "2023-11-20T00:00:00.000Z"
     }
     ```
 
-#### Remover um Usuário
+#### Remove a User
 
-Auth: `Necessário Token Bearer`
+Auth: `Bearer Token Required`
 
-- **Rota:** `DELETE /users/configs`
-  - Sem corpo de resposta.
+- **Route:** `DELETE /users/configs`
+  - No response body.
 
-### Contatos
+### Contacts
 
-#### Criar Contato
+#### Create Contact
 
-Auth: `Necessário Token Bearer`
+Auth: `Bearer Token Required`
 
-- **Rota:** `POST /contacts`
-  - **Corpo da Requisição:**
+- **Route:** `POST /contacts`
+  - **Request Body:**
     ```json
     {
-      "name": "Nome do Contato",
+      "name": "Contact Name",
       "telephone": "987654321"
     }
     ```
-  - **Corpo de Resposta:**
+  - **Response Body:**
     ```json
     {
       "id": "uuid",
-      "name": "Nome do Contato",
+      "name": "Contact Name",
       "telephone": "987654321",
       "register_date": "2023-11-20T00:00:00.000Z"
     }
     ```
 
-#### Listar Contatos
+#### List Contacts
 
-Auth: `Necessário Token Bearer`
+Auth: `Bearer Token Required`
 
-- **Rota:** `GET /contacts`
+- **Route:** `GET /contacts`
 
-  - **Corpo de Resposta:**
+  - **Response Body:**
 
     ```json
     [
       {
         "id": "uuid",
-        "name": "Nome do Contato",
+        "name": "Contact Name",
         "telephone": "987654321",
         "register_date": "2023-11-20T00:00:00.000Z"
       }
-      // ... outros contatos
+      // ... other contacts
     ]
     ```
 
-#### Atualizar Contato
+#### Update Contact
 
-Auth: `Necessário Token Bearer`
+Auth: `Bearer Token Required`
 
-- **Rota:** `PATCH /contacts/:contactId`
-  - **Corpo da Requisição:**
+- **Route:** `PATCH /contacts/:id`
+  - **Request Body:**
     ```json
     {
-      "name": "Novo Nome do Contato",
-      "telephone": "999999999"
+      "name": "Updated Contact Name",
+      "telephone": "123456789"
     }
     ```
-  - **Corpo de Resposta:**
+  - **Response Body:**
     ```json
     {
       "id": "uuid",
-      "name": "Novo Nome do Contato",
-      "telephone": "999999999",
+      "name": "Updated Contact Name",
+      "telephone": "123456789",
       "register_date": "2023-11-20T00:00:00.000Z"
     }
     ```
 
-#### Remover Contato
+#### Remove Contact
 
-Auth: `Necessário Token Bearer`
+Auth: `Bearer Token Required`
 
-- **Rota:** `DELETE /contacts/:contactId`
+- **Route:** `DELETE /contacts/:contactId`
+  - No response body.
 
-- Sem corpo de resposta.
+## Author
 
-## Autor
-
-- **Nome:** Jhonnatan Douglas
-- **Portfólio:** [https://portfolio-jhonnatandev.vercel.app/](https://portfolio-jhonnatandev.vercel.app/)
+- **Name:** Jhonnatan Douglas
+- **Portfolio:** [https://portfolio-jhonnatandev.vercel.app/](https://portfolio-jhonnatandev.vercel.app/)
 - **Github:** [JhonnatanDouglas](https://github.com/JhonnatanDouglas)
 - **E-mail:** [jhonnatanaraujodev@gmail.com](mailto:jhonnatanaraujodev@gmail.com)
 
-## Contribuição
+## Contributing
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests.
+Contributions are always welcome! Please feel free to submit issues or pull requests. If you want to contribute to this project, make sure to follow the guidelines in the project's issue tracker.
